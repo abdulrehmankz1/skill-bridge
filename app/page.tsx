@@ -1,3 +1,4 @@
+import { AccordionDemo } from "./components/FAQ";
 import HeroSection from "./components/HeroSection";
 import OurCourses from "./components/OurCourses";
 import Pricing from "./components/Pricing";
@@ -12,6 +13,7 @@ export default function Home() {
       <OurCourses />
       <Testimonials />
       <Pricing />
+      <AccordionDemo />
     </div>
   );
 }
