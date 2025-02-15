@@ -76,13 +76,13 @@ export function AccordionDemo() {
           >
             <AccordionTrigger className="accordiont-trigger gap-x-3 text-xl text-grey-15 flex items-center justify-between hover:no-underline border-b border-white-95">
               <div className="text-left">{faq.question}</div>
-              <div className="p-3 bg-orange-95 rounded-[6px] h-12 w-12">
+              <div className="p-3 bg-orange-95 rounded-lg h-12 w-12">
                 {openItem === faq.id ? <X /> : <Plus />}
               </div>
             </AccordionTrigger>
             <AccordionContent className="pt-10 pb-0 text-grey-15 text-base">
               <p>{faq.answer}</p>
-              <div className="py-4 px-6 border border-white-95 rounded-[6px] bg-white-97 mt-10 flex items-center justify-between">
+              <div className="py-4 px-6 border border-white-95 rounded-lg bg-white-97 mt-10 flex items-center justify-between">
                 <div>Enrollment Process for Different Courses</div>
                 <div className="p-3 bg-absolute-white rounded-full h-12 w-12">
                   <ArrowRight />
