@@ -1,6 +1,7 @@
 import { Button } from "@/app/components/ui/Button";
 import { Badge } from "@/app/components/ui/badge";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // Course Type Definition
@@ -133,8 +134,8 @@ const CourseDetails = ({ course }: { course: Course }) => {
           <p className="text-grey-35">{course.description}</p>
         </div>
         <div className="col-span-2 flex justify-end">
-          <Button variant="secondary" className="font-medium">
-            View Course
+          <Button asChild variant="secondary" className="font-medium">
+            <Link href="/course-details"> View Course</Link>
           </Button>
         </div>
       </div>
