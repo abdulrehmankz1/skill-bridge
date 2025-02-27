@@ -51,22 +51,54 @@ const yearlyPlans = [
   },
 ];
 
-const Pricing = () => {
+interface PricingCardProps {
+  showHeader?: boolean; // Optional Prop (default: true)
+}
+
+const PricingCard = ({ showHeader = true }: PricingCardProps) => {
   const [isYearly, setIsYearly] = useState(false);
   const plans = isYearly ? yearlyPlans : monthlyPlans;
 
   return (
     <div className="mb-24">
-      {/* Section Heading */}
-      <div className="grid grid-cols-6 gap-6 items-center mb-16">
-        <div className="col-span-4">
-          <h3 className="text-grey-15 font-semibold">Our Pricing</h3>
-          <p className="text-grey-35">
-            Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
-            elit id imperdiet et.
-          </p>
+      {/* Header Section */}
+      {showHeader && (
+        <div className="grid grid-cols-6 gap-6 items-center mb-10">
+          <div className="col-span-4">
+            <h3 className="text-grey-15 font-semibold">Our Pricing</h3>
+            <p className="text-grey-35">
+              Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
+              eget elit id imperdiet et.
+            </p>
+          </div>
+          <div className="col-span-2 flex justify-end">
+            <span className="bg-absolute-white p-3 rounded-lg flex space-x-2">
+              <Button
+                variant={!isYearly ? "default" : "ghost"}
+                className={`font-medium transition-all duration-300 transform ${
+                  !isYearly ? "scale-105 shadow-lg" : "scale-100"
+                }`}
+                onClick={() => setIsYearly(false)}
+              >
+                Monthly
+              </Button>
+              <Button
+                variant={isYearly ? "default" : "ghost"}
+                className={`font-medium transition-all duration-300 transform ${
+                  isYearly ? "scale-105 shadow-lg" : "scale-100"
+                }`}
+                onClick={() => setIsYearly(true)}
+              >
+                Yearly
+              </Button>
+            </span>
+          </div>
         </div>
-        <div className="col-span-2 flex justify-end">
+      )}
+
+      {/* Toggle Buttons Centered when Header is Hidden */}
+      {!showHeader && (
+        <div className="mb-10 flex justify-center">
           <span className="bg-absolute-white p-3 rounded-lg flex space-x-2">
             <Button
               variant={!isYearly ? "default" : "ghost"}
@@ -88,10 +120,10 @@ const Pricing = () => {
             </Button>
           </span>
         </div>
-      </div>
+      )}
 
-      {/* Section Cards */}
-      <div className="bg-absolute-white p-12 rounded-xl flex gap-x-7">
+      {/* Pricing Cards */}
+      <div className="bg-absolute-white p-12 rounded-xl flex gap-x-7 justify-center">
         {plans.map((plan, index) => (
           <div
             key={index}
@@ -144,4 +176,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default PricingCard;
