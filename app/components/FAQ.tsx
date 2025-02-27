@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
+
+import { Button } from "./ui/Button";
+import { ArrowRight, Plus, X } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "./ui/Button";
-import { ArrowRight, Plus, X } from "lucide-react";
+} from "@radix-ui/react-accordion";
 
 // FAQ Data Array
 const faqData = [
@@ -74,9 +75,9 @@ export function AccordionDemo() {
             value={faq.id}
             className="border border-white-95 p-10 rounded-xl mb-7"
           >
-            <AccordionTrigger className="accordiont-trigger gap-x-3 text-xl text-grey-15 flex items-center justify-between hover:no-underline border-b border-white-95">
-              <div className="text-left">{faq.question}</div>
-              <div className="p-3 bg-orange-95 rounded-lg h-12 w-12">
+            <AccordionTrigger className="accordion-trigger grid grid-cols-12 items-center gap-x-3 text-xl text-grey-15 hover:no-underline border-b border-white-95 pb-5">
+              <div className="text-left col-span-10">{faq.question}</div>
+              <div className="p-3 bg-orange-95 rounded-lg h-12 w-12 flex items-center justify-center ">
                 {openItem === faq.id ? <X /> : <Plus />}
               </div>
             </AccordionTrigger>
