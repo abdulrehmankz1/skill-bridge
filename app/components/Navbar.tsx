@@ -16,6 +16,7 @@ const Navbar = () => {
   ];
 
   const pathname = usePathname();
+  const isSignUpPage = pathname === "/auth/signup";
 
   return (
     <nav className="container mx-auto">
@@ -34,11 +35,11 @@ const Navbar = () => {
           />
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Button asChild variant="link">
-            <Link href="/sign-up">Sign Up</Link>
+          <Button asChild variant={isSignUpPage ? "default" : "link"}>
+            <Link href="/auth/signup">Sign Up</Link>
           </Button>
-          <Button asChild variant="default">
-            <Link href="/login">Login</Link>
+          <Button asChild variant={isSignUpPage ? "link" : "default"}>
+            <Link href="/auth/login">Login</Link>
           </Button>
           <button
             data-collapse-toggle="navbar-cta"
