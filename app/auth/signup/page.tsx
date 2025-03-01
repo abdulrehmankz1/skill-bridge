@@ -25,12 +25,12 @@ const Page = () => {
       {/* Grid Layout for Testimonials & Login Form */}
       <div className="grid grid-cols-1 md:grid-cols-11 gap-10 md:gap-20 items-center md:flex-row-reverse">
         {/* Students Testimonials (5/11 on larger screens) */}
-        <div className="md:col-span-5">
+        <div className="md:col-span-5 order-2 md:order-1">
           <StudentsTestimonials />
         </div>
 
-        {/* Login Form (6/11 on larger screens) */}
-        <div className="md:col-span-6">
+        {/* Sign Up Form (6/11 on larger screens) */}
+        <div className="md:col-span-6 order-1 md:order-2">
           <Card className="bg-absolute-white rounded-xl p-6 sm:p-10 border-none">
             <CardHeader className="p-0">
               <CardTitle className="text-3xl sm:text-4xl text-grey-15 text-center">
