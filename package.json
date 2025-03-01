@@ -11,7 +11,9 @@
   "dependencies": {
     "@fontsource/be-vietnam-pro": "^5.1.1",
     "@radix-ui/react-accordion": "^1.2.3",
-    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-checkbox": "^1.1.4",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.2",
     "accordion": "^3.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -21,7 +23,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
+    "react-slick": "^0.30.3",
     "shadcn-ui": "^0.9.4",
+    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -30,6 +34,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-slick": "^0.23.13",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "postcss": "^8",
