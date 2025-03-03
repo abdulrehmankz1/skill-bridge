@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/app/components/ui/Button";
 import {
   Card,
   CardContent,
@@ -50,7 +50,7 @@ export function LoginForm({
               <Button type="submit" className="w-full">
                 Login
               </Button>
-              <Button variant="outline" className="w-full">
+              <Button variant="secondary" className="w-full">
                 Login with Google
               </Button>
             </div>
