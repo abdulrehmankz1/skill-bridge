@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/app/components/ui/Button";
 import {
   Card,
   CardContent,
