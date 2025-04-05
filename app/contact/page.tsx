@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "../components/ui/Button";
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -13,7 +14,7 @@ const Contact = () => {
         paragraph="Welcome to SkillBridge's Pricing Plan page, where we offer two comprehensive options to cater to your needs: Free and Pro. We believe in providing flexible and affordable pricing options for our services. Whether you're an individual looking to enhance your skills or a business seeking professional development solutions, we have a plan that suits you. Explore our pricing options below and choose the one that best fits your requirements."
       />
       <div>
-        <div className="flex flex-col md:flex-row bg-absolute-white rounded-2xl">
+        <div className="flex flex-col md:flex-row bg-absolute-white rounded-2xl lg:mb-20 mb-12">
           <div className="w-full md:w-[70%] bg lg:p-14 p-7 border-r border-[#F1F1F3]">
             <div>
               {/* First row - 2 columns on md+ screens */}
@@ -116,7 +117,40 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-[30%] bg- p-14">Second Div</div>
+          <div className="w-full md:w-[30%] bg- p-14">
+            <div className="bg-white-99 border border-white-95 rounded-md p-7 flex items-center justify-center flex-col mb-5">
+              <div className="bg-white-99 border border-white-95 rounded-md p-3 w-fit">
+                <Mail />
+              </div>
+              <div className="text-grey-30 mt-3.5">support@skillbridge.com</div>
+            </div>
+            <div className="bg-white-99 border border-white-95 rounded-md p-7 flex items-center justify-center flex-col mb-5">
+              <div className="bg-white-99 border border-white-95 rounded-md p-3 w-fit">
+                <Phone />
+              </div>
+              <div className="text-grey-30 mt-3.5">+91 00000 00000</div>
+            </div>
+            <div className="bg-white-99 border border-white-95 rounded-md p-7 flex items-center justify-center flex-col mb-5">
+              <div className="bg-white-99 border border-white-95 rounded-md p-3 w-fit">
+                <MapPin />
+              </div>
+              <div className="text-grey-30 mt-3.5">Some Where in the World</div>
+            </div>
+            <div className="bg-white-99 border border-white-95 rounded-md p-7 flex items-center justify-center flex-col">
+              <div className="flex gap-2.5">
+                <div className="bg-white-99 border border-white-95 rounded-md p-3 w-fit">
+                  <Facebook />
+                </div>
+                <div className="bg-white-99 border border-white-95 rounded-md p-3 w-fit">
+                  <Twitter />
+                </div>
+                <div className="bg-white-99 border border-white-95 rounded-md p-3 w-fit">
+                  <Linkedin />
+                </div>
+              </div>
+              <div className="text-grey-30 mt-3.5">Social Profiles</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
