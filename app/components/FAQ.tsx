@@ -49,8 +49,9 @@ export function AccordionDemo() {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   return (
-    <div className="bg-absolute-white p-12 rounded-xl flex justify-between mb-24">
-      <div className="w-2/6">
+   <div className="lg:px-0 px-4">
+     <div className="bg-absolute-white p-12 rounded-xl flex justify-between flex-wrap lg:mb-24 mb-12">
+      <div className="lg:w-2/6 w-full">
         <h4 className="text-grey-15 font-semibold leading-[120%]">
           Frequently Asked Questions
         </h4>
@@ -66,7 +67,7 @@ export function AccordionDemo() {
       <Accordion
         type="single"
         collapsible
-        className="w-2/4"
+        className="lg:w-2/4 w-full"
         onValueChange={(value) => setOpenItem(value)}
       >
         {faqData.map((faq) => (
@@ -94,5 +95,6 @@ export function AccordionDemo() {
         ))}
       </Accordion>
     </div>
+   </div>
   );
 }

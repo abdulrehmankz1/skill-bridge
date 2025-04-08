@@ -14,7 +14,7 @@ const MarqueeSlider = () => {
   ];
 
   return (
-    <div className="p-6 rounded-lg border border-white-95 bg-absolute-white container mx-auto my-16">
+    <div className="p-6 rounded-lg border border-white-95 bg-absolute-white container mx-auto lg:my-16 my-10">
       {/* Marquee Container */}
       <Marquee>
         {logos.map((logo, index) => (

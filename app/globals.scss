@@ -19,3 +19,62 @@
     display: none !important;
   }
 }
+/* Mobile (up to 480px or 576px) */
+@media (max-width: 480px) {
+  .home_hero_section {
+    width: 80%;
+    h4 {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Larger Mobile (portrait/landscape) */
+@media (min-width: 481px) and (max-width: 576px) {
+  .home_hero_section {
+    width: 450px;
+    h4 {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Tablet (portrait) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .home_hero_section {
+    width: 450px;
+    h4 {
+      font-size: 24px;
+    }
+  }
+}
+
+/* Tablet (landscape) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .home_hero_section {
+    width: 650px;
+    h4 {
+      font-size: 36px;
+    }
+  }
+}
+
+/* Laptop */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .home_hero_section {
+    width: 650px;
+    h4 {
+      font-size: 36px;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+  .home_hero_section {
+    width: 650px;
+    h4 {
+      font-size: 36px;
+    }
+  }
+}

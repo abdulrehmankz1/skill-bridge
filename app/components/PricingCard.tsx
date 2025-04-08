@@ -60,18 +60,18 @@ const PricingCard = ({ showHeader = true }: PricingCardProps) => {
   const plans = isYearly ? yearlyPlans : monthlyPlans;
 
   return (
-    <div className="mb-24">
+    <div className="lg:pb-24 pb-12 lg:px-0 px-4">
       {/* Header Section */}
       {showHeader && (
         <div className="grid grid-cols-6 gap-6 items-center mb-10">
-          <div className="col-span-4">
+          <div className="lg:col-span-4 col-span-6">
             <h3 className="text-grey-15 font-semibold">Our Pricing</h3>
             <p className="text-grey-35">
               Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
               eget elit id imperdiet et.
             </p>
           </div>
-          <div className="col-span-2 flex justify-end">
+          <div className="lg:col-span-2 col-span-6 flex lg:justify-end justify-center">
             <span className="bg-absolute-white p-3 rounded-lg flex space-x-2">
               <Button
                 variant={!isYearly ? "default" : "ghost"}
@@ -98,7 +98,7 @@ const PricingCard = ({ showHeader = true }: PricingCardProps) => {
 
       {/* Toggle Buttons Centered when Header is Hidden */}
       {!showHeader && (
-        <div className="mb-10 flex justify-center">
+        <div className="lg:mb-10 mb-7 flex justify-center">
           <span className="bg-absolute-white p-3 rounded-lg flex space-x-2">
             <Button
               variant={!isYearly ? "default" : "ghost"}
@@ -123,11 +123,11 @@ const PricingCard = ({ showHeader = true }: PricingCardProps) => {
       )}
 
       {/* Pricing Cards */}
-      <div className="bg-absolute-white p-12 rounded-xl flex gap-x-7 justify-center">
+      <div className="bg-absolute-white lg:p-12 p-7 rounded-xl flex gap-x-7 justify-center lg:flex-nowrap flex-wrap">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="pt-10 px-6 pb-6 bg-white-99 border border-white-95 rounded-xl w-2/4"
+            className="lg:pt-10 pt-7 mb-7 lg:px-6 px-3 pb-6 bg-white-99 border border-white-95 rounded-xl lg:w-2/4 w-full"
           >
             <h6 className="py-2.5 bg-orange-97 border border-orange-90 mb-0 rounded font-semibold text-center text-grey-15">
               {plan.name}
@@ -144,7 +144,7 @@ const PricingCard = ({ showHeader = true }: PricingCardProps) => {
               <h6 className="text-grey-15 font-medium text-center my-6">
                 Available Features
               </h6>
-              <ul className="mx-7">
+              <ul className="lg:mx-7 mx-2">
                 {plan.features.map((feature, idx) => (
                   <li
                     key={idx}

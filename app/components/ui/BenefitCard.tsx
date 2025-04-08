@@ -11,7 +11,7 @@ const BenefitCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="max-w-sm p-10 bg-absolute-white border border-white-95 rounded-lg">
+  <div className="max-w-sm lg:p-10 p-7 bg-absolute-white border border-white-95 rounded-lg">
     <h1 className="mb-7 text-end font-bold text-grey-10">{id}</h1>
     <div>
       <h6 className="mb-2 text-grey-10 font-semibold">{title}</h6>
