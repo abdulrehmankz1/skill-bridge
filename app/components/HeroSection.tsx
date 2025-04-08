@@ -5,9 +5,9 @@ import MarqueeSlider from "./ui/MarqueeSlider";
 
 const HeroSection = () => {
   return (
-    <div className="my-24 container mx-auto">
-      <div className="bg-white-99 mb-4 border relative border-white-95 py-3 flex items-center justify-around px-6 rounded-lg w-[650px] mx-auto">
-        <div className="bg-orange-95 rounded-md p-3 w-12">
+    <div className="lg:my-24 my-20 container mx-auto">
+      <div className="bg-white-99 mb-4 border relative border-white-95 py-3 flex items-center justify-around px-6 rounded-lg home_hero_section mx-auto">
+        <div className="bg-orange-95 rounded-md p-3 lg:w-12 w-10">
           <Image
             src="/assets/images/hero-icon.svg"
             alt="hero Icon"
@@ -30,24 +30,27 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <h5 className="text-center text-grey-15 font-medium mb-2">
-        with Online Design and Development Courses.
-      </h5>
-      <p className="text-center text-grey-15 font-medium">
-        Learn from Industry Experts and Enhance Your Skills.
-      </p>
-      <div className="flex items-center justify-center mt-12">
-        <Button variant="default" className="font-medium mr-3">
-          Explore Courses
-        </Button>
-        <Button variant="secondary" className="font-medium">
-          View Pricing
-        </Button>
+      <div className="lg:mx-0 mx-7">
+        <h5 className="text-center text-grey-15 font-medium mb-2">
+          with Online Design and Development Courses.
+        </h5>
+        <p className="text-center text-grey-15 font-medium lg:mx-0 mx-2">
+          Learn from Industry Experts and Enhance Your Skills.
+        </p>
+        <div className="flex items-center justify-center lg:mt-12 mt-8">
+          <Button variant="default" className="font-medium mr-3">
+            Explore Courses
+          </Button>
+          <Button variant="secondary" className="font-medium">
+            View Pricing
+          </Button>
+        </div>
       </div>
       <MarqueeSlider />
       <Image
         src="/assets/images/video-img.svg"
         alt="video image"
+        className="lg:px-0 px-4"
         layout="responsive"
         width={100}
         height={100}

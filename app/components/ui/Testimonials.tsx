@@ -40,9 +40,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <div>
-      <div className="grid grid-cols-6 gap-6 items-center mb-14">
-        <div className="col-span-4">
+    <div className="lg:pb-24 pb-12 lg:px-0 px-4">
+      <div className="grid grid-cols-6 gap-6 items-center lg:mb-14 mb-7">
+        <div className="col-span-6 md:col-span-4">
           <h3 className="text-grey-15 font-semibold">Our Testimonials</h3>
           <p className="text-grey-35">
             Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
@@ -50,23 +50,25 @@ const Testimonials = () => {
             eget habitasse in velit fringilla feugiat senectus in.
           </p>
         </div>
-        <div className="col-span-2 flex justify-end">
+        <div className="col-span-6 md:col-span-2 flex justify-start md:justify-end">
           <Button variant="secondary" className="font-medium">
             View All
           </Button>
         </div>
       </div>
 
-      <div className="mb-24 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {/* Map through the testimonials array */}
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
             className="rounded-xl bg-absolute-white border border-white-95"
           >
-            <p className="text-grey-30 p-10">{testimonial.description}</p>
-            <div className="bg-white-99 py-6 px-10 border-t border-white-95 rounded-bl-xl rounded-br-xl rounded-tl-[radius] rounded-tr-[radius] flex items-center justify-between">
-              <span className="flex items-center">
+            <p className="text-grey-30 lg:p-10 p-6">
+              {testimonial.description}
+            </p>
+            <div className="bg-white-99 py-6 lg:px-10 px-6 border-t border-white-95 rounded-bl-xl rounded-br-xl rounded-tl-[radius] rounded-tr-[radius] flex items-center justify-between flex-wrap">
+              <span className="flex items-center mb-4">
                 <Image
                   src={testimonial.imgSrc}
                   alt={testimonial.alt}

@@ -1,4 +1,3 @@
-// components/OurCourses.tsx
 import React from "react";
 import { Button } from "./ui/Button";
 import CourseCard from "./ui/CourseCard";
@@ -63,9 +62,9 @@ const courses = [
 
 const OurCourses = () => {
   return (
-    <div>
-      <div className="grid grid-cols-6 gap-6 items-center mb-14">
-        <div className="col-span-4">
+    <div className="lg:pb-24 pb-12 lg:px-0 px-4">
+      <div className="grid grid-cols-6 gap-6 items-center lg:mb-14 mb-7">
+        <div className="col-span-6 md:col-span-4">
           <h3 className="text-grey-15 font-semibold">Our Courses</h3>
           <p className="text-grey-35">
             Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
@@ -73,15 +72,14 @@ const OurCourses = () => {
             eget habitasse in velit fringilla feugiat senectus in.
           </p>
         </div>
-        <div className="col-span-2 flex justify-end">
+        <div className="col-span-6 md:col-span-2 flex justify-start md:justify-end">
           <Button variant="secondary" className="font-medium">
             View All
           </Button>
         </div>
       </div>
-
       {/* Courses Grid */}
-      <div className="grid grid-cols-2 gap-6 mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((course, index) => (
           <CourseCard key={index} {...course} />
         ))}
